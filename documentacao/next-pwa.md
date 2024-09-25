@@ -1,55 +1,71 @@
-# Zero Config [PWA](https://web.dev/learn/pwa/) Plugin for [Next.js](https://nextjs.org/)
+# Plug-in [Zero Config PWA](https://web.dev/learn/pwa/) para [Next.js](https://nextjs.org/)
 
-This plugin is powered by [workbox](https://developer.chrome.com/docs/workbox/) and other good stuff.
 
-![size](https://img.shields.io/bundlephobia/minzip/next-pwa.svg) ![dependencies](https://img.shields.io/librariesio/release/npm/next-pwa) ![downloads](https://img.shields.io/npm/dw/next-pwa.svg) ![license](https://img.shields.io/npm/l/next-pwa.svg)
 
-👋 Share your awesome PWA project 👉 [here](https://github.com/shadowwalker/next-pwa/discussions/206)
+Este plugin é alimentado por [workbox](https://developer.chrome.com/docs/workbox/) e outras coisas boas.
 
-**Features**
+[![tamanho](https://camo.githubusercontent.com/ef1d95d8ba2a6ac6f94440e9abd41bce81b206d7d4e4da8f515a5e1e019d08ba/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f6e6578742d7077612e737667)](https://camo.githubusercontent.com/ef1d95d8ba2a6ac6f94440e9abd41bce81b206d7d4e4da8f515a5e1e019d08ba/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f6e6578742d7077612e737667) [![Dependências](https://camo.githubusercontent.com/59c5244e1cb9065864a1f7bf9f3034b32def9626735f2f6c0e6fc8ff65cb566c/68747470733a2f2f696d672e736869656c64732e696f2f6c6962726172696573696f2f72656c656173652f6e706d2f6e6578742d707761)](https://camo.githubusercontent.com/59c5244e1cb9065864a1f7bf9f3034b32def9626735f2f6c0e6fc8ff65cb566c/68747470733a2f2f696d672e736869656c64732e696f2f6c6962726172696573696f2f72656c656173652f6e706d2f6e6578742d707761) [![Downloads](https://camo.githubusercontent.com/341dc10847489bf90781ecd19df5f6cb1c914b55686aa9b2f8ef0a3c4c45a45d/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64772f6e6578742d7077612e737667)](https://camo.githubusercontent.com/341dc10847489bf90781ecd19df5f6cb1c914b55686aa9b2f8ef0a3c4c45a45d/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64772f6e6578742d7077612e737667) [![licença](https://camo.githubusercontent.com/bfb82cb85a1939bb5db8d9ceca56cc9a491fa252df36fc4e1a5a2ab534fb0abf/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6e6578742d7077612e737667)](https://camo.githubusercontent.com/bfb82cb85a1939bb5db8d9ceca56cc9a491fa252df36fc4e1a5a2ab534fb0abf/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6e6578742d7077612e737667)
 
-- 0️⃣ Zero config for registering and generating service worker
-- ✨ Optimized precache and runtime cache
-- 💯 Maximize lighthouse score
-- 🎈 Easy to understand examples
-- 📴 Completely offline support with fallbacks [example](https://github.com/shadowwalker/next-pwa/tree/master/examples/offline-fallback-v2) 🆕
-- 📦 Use [workbox](https://developer.chrome.com/docs/workbox/) and [workbox-window](https://developer.chrome.com/docs/workbox/modules/workbox-window) v6
-- 🍪 Work with cookies out of the box
-- 🔉 Default range requests for audios and videos
-- ☕ No custom server needed for Next.js 9+ [example](https://github.com/shadowwalker/next-pwa/tree/master/examples/next-9)
-- 🔧 Handle PWA lifecycle events opt-in [example](https://github.com/shadowwalker/next-pwa/tree/master/examples/lifecycle)
-- 📐 Custom worker to run extra code with code splitting and **typescript** support [example](https://github.com/shadowwalker/next-pwa/tree/master/examples/custom-ts-worker)
-- 📜 [Public environment variables](https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser) available in custom worker as usual
-- 🐞 Debug service worker with confidence in development mode without caching
-- 🌏 Internationalization (a.k.a I18N) with `next-i18next` [example](https://github.com/shadowwalker/next-pwa/tree/master/examples/next-i18next)
-- 🛠 Configurable by the same [workbox configuration options](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin) for [GenerateSW](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#generatesw-plugin) and [InjectManifest](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#injectmanifest-plugin)
-- 🚀 Spin up a [GitPod](https://gitpod.io/#https://github.com/shadowwalker/next-pwa/) and try out examples in rocket speed
-- ⚡ Support [blitz.js](https://blitzjs.com/) (simply add to `blitz.config.js`)
-- 🔩 (Experimental) precaching `.module.js` when `next.config.js` has `experimental.modern` set to `true`
+👋 Compartilhe seu incrível projeto 👉 PWA [aqui](https://github.com/shadowwalker/next-pwa/discussions/206)
 
-> **NOTE 1** - `next-pwa` version 2.0.0+ should only work with `next.js` 9.1+, and static files should only be served through `public` directory. This will make things simpler.
+**Características**
+
+- 0️⃣ Configuração zero para registrar e gerar service worker
+- ✨ Pré-cache otimizado e cache de tempo de execução
+- 💯 Maximize a pontuação do farol
+- 🎈 Exemplos fáceis de entender
+- 📴 Suporte totalmente offline com [exemplo](https://github.com/shadowwalker/next-pwa/tree/master/examples/offline-fallback-v2) 🆕 de fallbacks
+- 📦 Usar [workbox](https://developer.chrome.com/docs/workbox/) e [workbox-window](https://developer.chrome.com/docs/workbox/modules/workbox-window) v6
+- 🍪 Trabalhe com cookies prontos para uso
+- 🔉 Solicitações de intervalo padrão para áudios e vídeos
+- ☕ Nenhum servidor personalizado necessário para Next.js [exemplo](https://github.com/shadowwalker/next-pwa/tree/master/examples/next-9) 9+
+- 🔧 Exemplo de aceitação de eventos de ciclo de vida do PWA
+- 📐 Trabalho personalizado para executar código extra com divisão de código e [exemplo](https://github.com/shadowwalker/next-pwa/tree/master/examples/custom-ts-worker) de suporte **a texto datilografado**
+- 📜 [Variáveis de ambiente público](https://nextjs.org/docs/basic-features/environment-variables#exposing-environment-variables-to-the-browser) disponíveis no trabalho personalizado como de costume
+- 🐞 Depurar service worker com confiança no modo de desenvolvimento sem cache
+- 🌏 Internacionalização (também conhecida como I18N) com [exemplo](https://github.com/shadowwalker/next-pwa/tree/master/examples/next-i18next)`next-i18next`
+- 🛠 Configurável pelas mesmas [opções de configuração da caixa de trabalho](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin) para [GenerateSW](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#generatesw-plugin) e [InjectManifest](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#injectmanifest-plugin)
+- 🚀 Gire um [GitPod](https://gitpod.io/#https://github.com/shadowwalker/next-pwa/) e experimente exemplos na velocidade do foguete
+- ⚡ Suporte [blitz.js](https://blitzjs.com/) (basta adicionar a `blitz.config.js`)
+- 🔩 Pré-armazenamento em cache (experimental) quando definido como `.module.js``next.config.js``experimental.modern``true`
+
+> **NOTA 1** - a versão 2.0.0+ deve funcionar apenas com 9.1+, e os arquivos estáticos só devem ser servidos por meio do diretório. Isso tornará as coisas mais simples.`next-pwa``next.js``public`
 >
-> **NOTE 2** - If you encounter error `TypeError: Cannot read property **'javascript' of undefined**` during build, [please consider upgrade to webpack5 in `next.config.js`](https://github.com/shadowwalker/next-pwa/issues/198#issuecomment-817205700).
+> **NOTA 2** - Se você encontrar um erro durante a compilação, [considere atualizar para webpack5 em `next.config.js`](https://github.com/shadowwalker/next-pwa/issues/198#issuecomment-817205700).`TypeError: Cannot read property **'javascript' of undefined**`
 
----
+------
 
-[![Open in Gitpod](https://img.shields.io/badge/Open%20In-Gitpod.io-%231966D2?style=for-the-badge&logo=gitpod)](https://gitpod.io/#https://github.com/shadowwalker/next-pwa/)
+[![Abrir no Gitpod](https://camo.githubusercontent.com/163efbc102b063a86a5528c4afea79927c350e67f757aecbda9dabfeca87936c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4f70656e253230496e2d476974706f642e696f2d2532333139363644323f7374796c653d666f722d7468652d6261646765266c6f676f3d676974706f64)](https://gitpod.io/#https://github.com/shadowwalker/next-pwa/)
 
-## Install
+## Instalar
 
-> If you are new to `next.js` or `react.js` at all, you may want to first checkout [learn next.js](https://nextjs.org/learn/basics/create-nextjs-app) or [next.js document](https://nextjs.org/docs/getting-started). Then start from [a simple example](https://github.com/shadowwalker/next-pwa/tree/master/examples/next-9) or [progressive-web-app example in next.js repository](https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app).
 
-```bash
+
+> Se você é novo ou não conhece, talvez queira primeiro [fazer o checkout para aprender next.js](https://nextjs.org/learn/basics/create-nextjs-app) ou [next.js documento](https://nextjs.org/docs/getting-started). Em seguida, comece com [um exemplo simples](https://github.com/shadowwalker/next-pwa/tree/master/examples/next-9) ou um [exemplo de aplicativo da web progressivo em next.js repositório](https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app).`next.js``react.js`
+
+```
 yarn add next-pwa
 ```
 
-## Basic Usage
 
-### Step 1: withPWA
 
-Update or create `next.config.js` with
+## Uso básico
 
-```javascript
+
+
+### Passo 1: com PWA
+
+
+
+Atualizar ou criar com`next.config.js`
+
+
+
+Explain
+
+
+
+```
 const withPWA = require('next-pwa')({
   dest: 'public'
 })
@@ -59,27 +75,39 @@ module.exports = withPWA({
 })
 ```
 
-After running `next build`, this will generate two files in your `public`: `workbox-*.js` and `sw.js`, which will automatically be served statically.
 
-If you are using Next.js version 9 or newer, then skip the options below and move on to Step 2.
 
-If you are using Next.js older than version 9, you'll need to pick an option below before continuing to Step 2.
+Depois de executar , isso gerará dois arquivos em seu : e , que serão automaticamente servidos estaticamente.`next build``public``workbox-*.js``sw.js`
 
-### Option 1: Host Static Files
+Se você estiver usando Next.js versão 9 ou mais recente, pule as opções abaixo e vá para a Etapa 2.
 
-Copy files to your static file hosting server, so that they are accessible from the following paths: `https://yourdomain.com/sw.js` and `https://yourdomain.com/workbox-*.js`.
+Se você estiver usando Next.js anterior à versão 9, precisará escolher uma opção abaixo antes de continuar para a Etapa 2.
 
-One example is using Firebase hosting service to host those files statically. You can automate the copy step using scripts in your deployment workflow.
+### Opção 1: hospedar arquivos estáticos
 
-> For security reasons, you must host these files directly from your domain. If the content is delivered using a redirect, the browser will refuse to run the service worker.
 
-### Option 2: Use Custom Server
 
-When an HTTP request is received, test if those files are requested, then return those static files.
+Copie os arquivos para o servidor de hospedagem de arquivos estáticos, para que eles possam ser acessados a partir dos seguintes caminhos: e .`https://yourdomain.com/sw.js``https://yourdomain.com/workbox-*.js`
 
-Example `server.js`
+Um exemplo é usar o serviço de hospedagem Firebase para hospedar esses arquivos estaticamente. Você pode automatizar a etapa de cópia usando scripts em seu fluxo de trabalho de implantação.
 
-```javascript
+> Por motivos de segurança, você precisa hospedar esses arquivos diretamente do seu domínio. Se o conteúdo for entregue usando um redirecionamento, o navegador se recusará a executar o service worker.
+
+### Opção 2: usar servidor personalizado
+
+
+
+Quando uma solicitação HTTP for recebida, teste se esses arquivos são solicitados e retorne esses arquivos estáticos.
+
+Exemplo `server.js`
+
+
+
+Explain
+
+
+
+```
 const { createServer } = require('http')
 const { join } = require('path')
 const { parse } = require('url')
@@ -105,13 +133,23 @@ app.prepare().then(() => {
 })
 ```
 
-> The following setup has nothing to do with `next-pwa` plugin, and you probably have already set them up. If not, go ahead and set them up.
 
-### Step 2: Add Manifest File (Example)
 
-Create a `manifest.json` file in your `public` folder:
+> A configuração a seguir não tem nada a ver com o plug-in e você provavelmente já os configurou. Se não, vá em frente e configure-os.`next-pwa`
 
-```json
+### Etapa 2: Adicionar arquivo de manifesto (exemplo)
+
+
+
+Crie um arquivo em sua pasta:`manifest.json``public`
+
+
+
+Explain
+
+
+
+```
 {
   "name": "PWA App",
   "short_name": "App",
@@ -141,11 +179,21 @@ Create a `manifest.json` file in your `public` folder:
 }
 ```
 
-### Step 3: Add Head Meta (Example)
 
-Add the following into `_document.jsx` or `_app.tsx`, in `<Head>`:
 
-```html
+### Etapa 3: adicionar meta de cabeça (exemplo)
+
+
+
+Adicione o seguinte em ou , em :`_document.jsx``_app.tsx``<Head>`
+
+
+
+Explain
+
+
+
+```
 <meta name="application-name" content="PWA App" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -195,32 +243,54 @@ Add the following into `_document.jsx` or `_app.tsx`, in `<Head>`:
 -->
 ```
 
-> Tip: Put the `viewport` head meta tag into `_app.js` rather than in `_document.js` if you need it.
 
-```typescript
+
+> Dica: coloque a metatag head em vez de dentro, se necessário.`viewport``_app.js``_document.js`
+
+
+
+Explain
+
+
+
+```
 <meta
   name='viewport'
   content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
 />
 ```
 
+
+
 ## Offline Fallbacks
 
-Offline fallbacks are useful when the fetch failed from both cache and network, a precached resource is served instead of present an error from browser.
 
-To get started simply add a `/_offline` page such as `pages/_offline.js` or `pages/_offline.jsx` or `pages/_offline.ts` or `pages/_offline.tsx`. Then you are all set! When the user is offline, all pages which are not cached will fallback to '/\_offline'.
 
-**[Use this example to see it in action](https://github.com/shadowwalker/next-pwa/tree/master/examples/offline-fallback-v2)**
+Os fallbacks offline são úteis quando a busca falhou no cache e na rede, um recurso pré-armazenado em cache é servido em vez de apresentar um erro do navegador.
 
-`next-pwa` helps you precache those resources on the first load, then inject a fallback handler to `handlerDidError` plugin to all `runtimeCaching` configs, so that precached resources are served when fetch failed.
+Para começar, basta adicionar uma página como ou ou ou . Então está tudo pronto! Quando o usuário estiver offline, todas as páginas que não estiverem armazenadas em cache retornarão para '/_offline'.`/_offline``pages/_offline.js``pages/_offline.jsx``pages/_offline.ts``pages/_offline.tsx`
 
-You can also setup `precacheFallback.fallbackURL` in your [runtimeCaching config entry](https://developer.chrome.com/docs/workbox/reference/workbox-build/#type-RuntimeCaching) to implement similar functionality. The difference is that above method is based on the resource type, this method is based matched url pattern. If this config is set in the runtimeCaching config entry, resource type based fallback will be disabled automatically for this particular url pattern to avoid conflict.
+**[Use este exemplo para vê-lo em ação](https://github.com/shadowwalker/next-pwa/tree/master/examples/offline-fallback-v2)**
 
-## Configuration
+```
+next-pwa` ajuda você a pré-armazenar esses recursos em cache no primeiro carregamento e, em seguida, injetar um manipulador de fallback para plug-in em todas as configurações, para que os recursos pré-armazenados em cache sejam atendidos quando a busca falhar.`handlerDidError``runtimeCaching
+```
 
-There are options you can use to customize the behavior of this plugin by adding `pwa` object in the next config in `next.config.js`:
+Você também pode configurar sua [entrada de configuração runtimeCaching](https://developer.chrome.com/docs/workbox/reference/workbox-build/#type-RuntimeCaching) para implementar uma funcionalidade semelhante. A diferença é que o método acima é baseado no tipo de recurso, este método é baseado no padrão de url correspondente. Se essa configuração for definida na entrada de configuração runtimeCaching, o fallback baseado em tipo de recurso será desabilitado automaticamente para esse padrão de url específico para evitar conflitos.`precacheFallback.fallbackURL`
 
-```javascript
+## Configuração
+
+
+
+Existem opções que você pode usar para personalizar o comportamento deste plugin adicionando objeto na próxima configuração em:`pwa``next.config.js`
+
+
+
+Explain
+
+
+
+```
 const withPWA = require('next-pwa')({
   dest: 'public'
   // disable: process.env.NODE_ENV === 'development',
@@ -235,103 +305,220 @@ module.exports = withPWA({
 })
 ```
 
-### Available Options
 
-- disable: boolean - whether to disable pwa feature as a whole
-  - default: `false`
-  - set `disable: false`, so that it will generate service worker in both `dev` and `prod`
-  - set `disable: true` to completely disable PWA
-  - if you don't need to debug service worker in `dev`, you can set `disable: process.env.NODE_ENV === 'development'`
-- register: boolean - whether to let this plugin register service worker for you
-  - default to `true`
-  - set to `false` when you want to handle register service worker yourself, this could be done in `componentDidMount` of your root app. you can consider the [register.js](https://github.com/shadowwalker/next-pwa/blob/master/register.js) as an example.
-- scope: string - url scope for pwa
-  - default: [`basePath`](https://nextjs.org/docs/api-reference/next.config.js/basepath) in `next.config.js` or `/`
-  - set to `/app` so that path under `/app` will be PWA while others are not
-- sw: string - service worker script file name
-  - default: `/sw.js`
-  - set to another file name if you want to customize the output file name
-- runtimeCaching - caching strategies (array or callback function)
-  - default: see the **Runtime Caching** section for the default configuration
-  - accepts an array of cache entry objects, [please follow the structure here](https://developer.chrome.com/docs/workbox/reference/workbox-build/#type-RuntimeCaching)
-  - Note: the order of the array matters. The first rule that matches is effective. Therefore, please **ALWAYS** put rules with larger scope behind the rules with a smaller and specific scope.
-- publicExcludes - an array of glob pattern strings to exclude files in the `public` folder from being precached.
-  - default: `['!noprecache/**/*']` - this means that the default behavior will precache all the files inside your `public` folder but files inside `/public/noprecache` folder. You can simply put files inside that folder to not precache them without config this.
-  - example: `['!img/super-large-image.jpg', '!fonts/not-used-fonts.otf']`
-- buildExcludes - an array of extra pattern or function to exclude files from being precached in `.next/static` (or your custom build) folder
-  - default: `[]`
-  - example: `[/chunks\/images\/.*$/]` - Don't precache files under `.next/static/chunks/images` (Highly recommend this to work with `next-optimized-images` plugin)
-  - doc: Array of (string, RegExp, or function()). One or more specifiers used to exclude assets from the precache manifest. This is interpreted following the same rules as Webpack's standard exclude option.
-- cacheStartUrl - whether to cache start url
-  - default: `true`
-  - [discussion of use case to not cache start url at all](https://github.com/shadowwalker/next-pwa/pull/296#issuecomment-1094167025)
-- dynamicStartUrl - if your start url returns different HTML document under different state (such as logged in vs. not logged in), this should be set to true.
-  - default: `true`
-  - effective when `cacheStartUrl` set to `true`
-  - recommend: set to **false** if your start url always returns same HTML document, then start url will be precached, this will help to speed up first load.
-- dynamicStartUrlRedirect - if your start url redirect to another route such as `/login`, it's recommended to setup this redirected url for the best user experience.
-  - default: `undefined`
-  - effective when `dynamicStartUrlRedirect` set to `true`
-- fallbacks - config precached routes to fallback when both cache and network not available to serve resources.
-  - **if you just need a offline fallback page, simply create a `/_offline` page such as `pages/_offline.js` and you are all set, no configuration necessary**
-  - default: `object`
-    - `fallbacks.document` - fallback route for document (page), default to `/_offline` if you created that page
-    - `fallbacks.image` - fallback route for image, default to none
-    - `fallbacks.audio` - fallback route for audio, default to none
-    - `fallbacks.video` - fallback route for video, default to none
-    - `fallbacks.font` - fallback route for font, default to none
-- cacheOnFrontEndNav - enable additional route cache when navigate between pages with `next/link` on front end. Checkout this [example](https://github.com/shadowwalker/next-pwa/tree/master/examples/cache-on-front-end-nav) for some context about why this is implemented.
-  - default: `false`
-  - note: this improve user experience on special use cases but it also adds some overhead because additional network call, I suggest you consider this as a trade off.
-- ~~subdomainPrefix: string - url prefix to allow hosting static files on a subdomain~~
-  - ~~default: `""` - i.e. default with no prefix~~
-  - ~~example: `/subdomain` if the app is hosted on `example.com/subdomain`~~
-  - deprecated, use [basePath](https://nextjs.org/docs/api-reference/next.config.js/basepath) instead
-- reloadOnOnline - changes the behaviour of the app when the device detects that it has gone back "online" and has a network connection. Indicate if the app should call `location.reload()` to refresh the app.
-  - default: `true`
-- customWorkerDir - customize the directory where `next-pwa` looks for a custom worker implementation to add to the service worker generated by workbox. For more information, check out the [custom worker example](https://github.com/shadowwalker/next-pwa/tree/master/examples/custom-ts-worker).
-  - default: `worker`
 
-### Other Options
+### Opções Disponíveis
 
-`next-pwa` uses `workbox-webpack-plugin`, other options which could also be put in `pwa` object can be found [**ON THE DOCUMENTATION**](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin) for [GenerateSW](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#generatesw-plugin) and [InjectManifest](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#injectmanifest-plugin). If you specify `swSrc`, `InjectManifest` plugin will be used, otherwise `GenerateSW` will be used to generate service worker.
 
-### Runtime Caching
 
-`next-pwa` uses a default runtime [cache.js](https://github.com/shadowwalker/next-pwa/blob/master/cache.js)
+- Desativar: Booleano - se o recurso PWA deve ser desativado como um todo
 
-There is a great chance you may want to customize your own runtime caching rules. Please feel free to copy the default `cache.js` file and customize the rules as you like. Don't forget to inject the configurations into your `pwa` config in `next.config.js`.
+  - inadimplência: `false`
+  - , para que ele gere service worker em ambos e `disable: false``dev``prod`
+  - definido para desativar completamente o PWA`disable: true`
+  - Se você não precisar depurar o service worker no , poderá definir `dev``disable: process.env.NODE_ENV === 'development'`
 
-Here is the [document on how to write runtime caching configurations](https://developer.chrome.com/docs/workbox/reference/workbox-build/#type-RuntimeCaching), including background sync and broadcast update features and more!
+- Register: Boolean - se deve permitir que este plugin registre o service worker para você
 
-## Tips
+  - padrão para `true`
+  - Definido como Quando você deseja lidar com o Register Service Worker por conta própria, isso pode ser feito em seu aplicativo raiz. Você pode considerar o [register.js](https://github.com/shadowwalker/next-pwa/blob/master/register.js) como exemplo.`false``componentDidMount`
 
-1. [Common UX pattern to ask user to reload when new service worker is installed](https://github.com/shadowwalker/next-pwa/blob/master/examples/lifecycle/pages/index.js#L26-L38)
-2. Use a convention like `{command: 'doSomething', message: ''}` object when `postMessage` to service worker. So that on the listener, it could do multiple different tasks using `if...else...`.
-3. When you are debugging service worker, constantly `clean application cache` to reduce some flaky errors.
-4. If you are redirecting the user to another route, please note [workbox by default only cache response with 200 HTTP status](https://developer.chrome.com/docs/workbox/modules/workbox-cacheable-response#what_are_the_defaults), if you really want to cache redirected page for the route, you can specify it in `runtimeCaching` such as `options.cacheableResponse.statuses=[200,302]`.
-5. When debugging issues, you may want to format your generated `sw.js` file to figure out what's really going on.
-6. Force `next-pwa` to generate worker box production build by specify the option `mode: 'production'` in your `pwa` section of `next.config.js`. Though `next-pwa` automatically generate the worker box development build during development (by running `next`) and worker box production build during production (by running `next build` and `next start`). You may still want to force it to production build even during development of your web app for following reason:
-   1. Reduce logging noise due to production build doesn't include logging.
-   2. Improve performance a bit due to production build is optimized and minified.
-7. If you just want to disable worker box logging while keeping development build during development, [simply put `self.__WB_DISABLE_DEV_LOGS = true` in your `worker/index.js` (create one if you don't have one)](https://github.com/shadowwalker/next-pwa/blob/c48ef110360d0138ad2dacd82ab96964e3da2daf/examples/custom-worker/worker/index.js#L6).
-8. It is common developers have to use `userAgent` string to determine if users are using Safari/iOS/MacOS or some other platform, [ua-parser-js](https://www.npmjs.com/package/ua-parser-js) library is a good friend for that purpose.
+- Escopo: String - Escopo de URL para PWA
 
-## Reference
+  - padrão: [`basePath`](https://nextjs.org/docs/api-reference/next.config.js/basepath) em ou `next.config.js``/`
+  - definido para que o caminho abaixo seja PWA, enquanto outros não`/app``/app`
 
-1. [Google Workbox](https://developer.chrome.com/docs/workbox/what-is-workbox/)
-2. [ServiceWorker, MessageChannel, & postMessage](https://ponyfoo.com/articles/serviceworker-messagechannel-postmessage) by [Nicolás Bevacqua](https://ponyfoo.com/contributors/ponyfoo)
-3. [The Service Worker Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
-4. [6 Tips to make your iOS PWA feel like a native app](https://www.netguru.com/codestories/pwa-ios)
-5. [Make Your PWA Available on Google Play Store](https://www.netguru.com/codestories/make-your-pwa-available-on-google-play-store)
+- sw: string - nome do arquivo de script do service worker
 
-## Fun PWA Projects
+  - inadimplência: `/sw.js`
+  - Defina como outro nome de arquivo se quiser personalizar o nome do arquivo de saída
 
-1. [Experience SAMSUNG on an iPhone - must open on an iPhone to start](https://itest.nz/)
-2. [App Scope - like an app store for PWA](https://appsco.pe/)
-3. [PWA Directory](https://pwa-directory.appspot.com/)
-4. [PWA Builder - Alternative way to build awesome PWA](https://www.pwabuilder.com/)
+- runtimeCaching - estratégias de cache (array ou função de retorno de chamada)
 
-## License
+  - padrão: consulte a seção **Cache de tempo de execução** para obter a configuração padrão
+  - aceita uma matriz de objetos de entrada de cache, [siga a estrutura aqui](https://developer.chrome.com/docs/workbox/reference/workbox-build/#type-RuntimeCaching)
+  - Nota: a ordem da matriz é importante. A primeira regra que corresponde é eficaz. Portanto, por favor, **SEMPRE** coloque regras com escopo maior atrás das regras com um escopo menor e específico.
+
+- publicExcludes - uma matriz de strings de padrão glob para excluir arquivos na pasta de serem pré-armazenados em cache. 
+
+  ```
+  public
+  ```
+
+  - Padrão: - Isso significa que o comportamento padrão armazenará em cache todos os arquivos dentro da pasta, mas os arquivos dentro da pasta. Você pode simplesmente colocar arquivos dentro dessa pasta para não armazená-los em pré-cache sem configurar isso.`['!noprecache/**/*']``public``/public/noprecache`
+  - exemplo: `['!img/super-large-image.jpg', '!fonts/not-used-fonts.otf']`
+
+- buildExcludes - uma matriz de padrão ou função extra para excluir arquivos de serem pré-armazenados em cache na pasta (ou em sua compilação personalizada) 
+
+  ```
+  .next/static
+  ```
+
+  - inadimplência: `[]`
+  - exemplo: - Não pré-armazene arquivos em cache (recomendo isso para trabalhar com plugin)`[/chunks\/images\/.*$/]``.next/static/chunks/images``next-optimized-images`
+  - doc: Matriz de (string, RegExp ou function()). Um ou mais especificadores usados para excluir ativos do manifesto de pré-cache. Isso é interpretado seguindo as mesmas regras da opção de exclusão padrão do Webpack.
+
+- cacheStartUrl - se o URL inicial do cache deve ser armazenado em cache
+
+  - inadimplência: `true`
+  - [Discussão do caso de uso para não armazenar em cache o URL inicial](https://github.com/shadowwalker/next-pwa/pull/296#issuecomment-1094167025)
+
+- dynamicStartUrl - se o URL inicial retornar um documento HTML diferente em um estado diferente (como conectado vs. não conectado), isso deve ser definido como true.
+
+  - inadimplência: `true`
+  - efetivo quando definido como `cacheStartUrl``true`
+  - recommend: defina como **false** se o seu url inicial sempre retornar o mesmo documento HTML, o url inicial será pré-armazenado em cache, isso ajudará a acelerar o primeiro carregamento.
+
+- dynamicStartUrlRedirect - se a URL inicial redirecionar para outra rota, como , é recomendável configurar essa URL redirecionada para obter a melhor experiência do usuário. 
+
+  ```
+  /login
+  ```
+
+  - inadimplência: `undefined`
+  - efetivo quando definido como `dynamicStartUrlRedirect``true`
+
+- fallbacks - configure rotas pré-armazenadas em cache para fallback quando o cache e a rede não estiverem disponíveis para atender aos recursos.
+
+  - **Se você só precisa de uma página de fallback offline, basta criar uma página `/_offline`, como `Pages/_offline.js` e está tudo pronto, sem necessidade de configuração**
+
+  - inadimplência: 
+
+    ```
+    object
+    ```
+
+    - `fallbacks.document` - rota de fallback para documento (página), padrão para se você criou essa página`/_offline`
+    - `fallbacks.image` - rota de fallback para imagem, padrão para nenhum
+    - `fallbacks.audio` - rota de fallback para áudio, padrão para nenhum
+    - `fallbacks.video` - rota de fallback para vídeo, padrão para nenhum
+    - `fallbacks.font` - rota de fallback para fonte, padrão para nenhum
+
+- cacheOnFrontEndNav - habilite o cache de rota adicional ao navegar entre páginas com o front-end. Confira este [exemplo](https://github.com/shadowwalker/next-pwa/tree/master/examples/cache-on-front-end-nav) para obter algum contexto sobre por que isso é implementado. 
+
+  ```
+  next/link
+  ```
+
+  - inadimplência: `false`
+  - nota: isso melhora a experiência do usuário em casos de uso especiais, mas também adiciona alguma sobrecarga porque chamada de rede adicional, sugiro que você considere isso como uma compensação.
+
+- subdomainPrefix: string - prefixo de url para permitir a hospedagem de arquivos estáticos em um subdomínio
+
+  - ~~padrão: `""` - ou seja, padrão sem prefixo~~
+  - ~~Exemplo: `/subdomain` se o aplicativo estiver hospedado em `example.com/subdomain`~~
+  - obsoleto, use [basePath](https://nextjs.org/docs/api-reference/next.config.js/basepath) em vez disso
+
+- reloadOnOnline - altera o comportamento do aplicativo quando o dispositivo detecta que ele voltou "online" e tem uma conexão de rede. Indique se o aplicativo deve chamar para atualizar o aplicativo. 
+
+  ```
+  location.reload()
+  ```
+
+  - inadimplência: `true`
+
+- customWorkerDir - personalize o diretório em que procura uma implementação de trabalhador personalizado para adicionar ao service worker gerado pelo workbox. Para obter mais informações, confira o [exemplo de trabalhador personalizado](https://github.com/shadowwalker/next-pwa/tree/master/examples/custom-ts-worker). 
+
+  ```
+  next-pwa
+  ```
+
+  - inadimplência: `worker`
+
+### Outras opções
+
+
+
+```
+next-pwa` uses , outras opções que também podem ser colocadas no objeto podem ser encontradas [**NA DOCUMENTAÇÃO**](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin) para [GenerateSW](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#generatesw-plugin) e [InjectManifest](https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/#injectmanifest-plugin). Se você especificar , o plugin será usado, caso contrário, será usado para gerar o service worker.`workbox-webpack-plugin``pwa``swSrc``InjectManifest``GenerateSW
+```
+
+### Cache de tempo de execução
+
+
+
+`next-pwa` usa um [cache.js](https://github.com/shadowwalker/next-pwa/blob/master/cache.js) de tempo de execução padrão
+
+Há uma grande chance de você querer personalizar suas próprias regras de cache de tempo de execução. Sinta-se à vontade para copiar o arquivo padrão e personalizar as regras como desejar. Não se esqueça de injetar as configurações em sua configuração em .`cache.js``pwa``next.config.js`
+
+Aqui está o [documento sobre como escrever configurações de cache de tempo de execução](https://developer.chrome.com/docs/workbox/reference/workbox-build/#type-RuntimeCaching), incluindo recursos de sincronização em segundo plano e atualização de transmissão e muito mais!
+
+## Dicas
+
+
+
+1. [Padrão comum de UX para solicitar que o usuário recarregue quando um novo service worker é instalado](https://github.com/shadowwalker/next-pwa/blob/master/examples/lifecycle/pages/index.js#L26-L38)
+
+2. Use uma convenção como objeto quando trabalhar no serviço. Para que, no ouvinte, ele possa executar várias tarefas diferentes usando .`{command: 'doSomething', message: ''}``postMessage``if...else...`
+
+3. Quando você estiver depurando o service worker, constantemente para reduzir alguns erros instáveis.`clean application cache`
+
+4. Se você estiver redirecionando o usuário para outra rota, observe que a [caixa de trabalho por padrão apenas armazena em cache a resposta com status HTTP 200](https://developer.chrome.com/docs/workbox/modules/workbox-cacheable-response#what_are_the_defaults), se você realmente deseja armazenar em cache a página redirecionada para a rota, você pode especificá-la como .`runtimeCaching``options.cacheableResponse.statuses=[200,302]`
+
+5. Ao depurar problemas, talvez você queira formatar o arquivo gerado para descobrir o que realmente está acontecendo.`sw.js`
+
+6. Force para gerar a construção de produção da caixa de trabalho por especifique a opção em sua seção de . Embora gere automaticamente a compilação de desenvolvimento da caixa de trabalho durante o desenvolvimento (executando ) e a compilação de produção da caixa de trabalho durante a produção (executando e ). Você ainda pode querer forçá-lo a criar em produção, mesmo durante o desenvolvimento do seu aplicativo Web, pelo seguinte motivo: 
+
+   ```
+   next-pwa
+   ```
+
+   ```
+   mode: 'production'
+   ```
+
+   ```
+   pwa
+   ```
+
+   ```
+   next.config.js
+   ```
+
+   ```
+   next-pwa
+   ```
+
+   ```
+   next
+   ```
+
+   ```
+   next build
+   ```
+
+   ```
+   next start
+   ```
+
+   1. Reduzir o ruído de registro em log devido ao build de produção não inclui registro em log.
+   2. Melhore um pouco o desempenho devido à compilação de produção ser otimizada e reduzida.
+
+7. Se você deseja apenas desabilitar o registro da caixa de trabalho enquanto mantém a compilação de desenvolvimento durante o desenvolvimento, [basta colocar `self.__WB_DISABLE_DEV_LOGS = true` em seu `worker/index.js` (crie um se você não tiver um).](https://github.com/shadowwalker/next-pwa/blob/c48ef110360d0138ad2dacd82ab96964e3da2daf/examples/custom-worker/worker/index.js#L6)
+
+8. É comum que os desenvolvedores precisem usar string para determinar se os usuários estão usando Safari / iOS / MacOS ou alguma outra plataforma, [a biblioteca ua-parser-js](https://www.npmjs.com/package/ua-parser-js) é uma boa amiga para esse propósito.`userAgent`
+
+## Referência
+
+
+
+1. [Caixa de trabalho do Google](https://developer.chrome.com/docs/workbox/what-is-workbox/)
+2. [ServiceWorker, MessageChannel e postMessage](https://ponyfoo.com/articles/serviceworker-messagechannel-postmessage) por [Nicolás Bevacqua](https://ponyfoo.com/contributors/ponyfoo)
+3. [O ciclo de vida do Service Worker](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
+4. [6 dicas para fazer seu iOS PWA parecer um aplicativo nativo](https://www.netguru.com/codestories/pwa-ios)
+5. [Disponibilize seu PWA na Google Play Store](https://www.netguru.com/codestories/make-your-pwa-available-on-google-play-store)
+
+## Projetos divertidos do PWA
+
+
+
+1. [Experimente SAMSUNG em um iPhone - deve abrir em um iPhone para iniciar](https://itest.nz/)
+2. [App Scope - como uma loja de aplicativos para PWA](https://appsco.pe/)
+3. [Diretório PWA](https://pwa-directory.appspot.com/)
+4. [PWA Builder - Maneira alternativa de construir PWA incrível](https://www.pwabuilder.com/)
+
+## Licença
+
+
 
 MIT
